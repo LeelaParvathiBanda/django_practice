@@ -38,12 +38,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Our Teams</h1>
+        <h1>Teams</h1>
         <ul>
-            <li>Team Alpha</li>
-            <li>Team Bravo</li>
-            <li>Team Delta</li>
-            <li>Team Omega</li>
+            {% for i in teams %}
+                <a href="{% url 'list_players' i.id %}"><li>{{ i.t_name }}</li></a> 
+            {% endfor %}
         </ul>
     </div>
 </body>
